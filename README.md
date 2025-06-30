@@ -1,7 +1,7 @@
 # MiniWorkerThread
 A minimal, single-class worker thread for C++—flag-controlled, fast, and heap-free.
 
-MiniWorkerThread is a minimal, single-class and single-file worker thread for C++. 
+MiniWorkerThread is a minimal, single-class worker thread for C++. 
 Features: C++11, no heap, thread-safe, sleeping idle thread, worker reusable for another task, very simple, debuggable and modifyable.
 
 Usage:
