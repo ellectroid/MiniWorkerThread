@@ -38,8 +38,13 @@ private:
 public:
 	WorkerThread() :
 			m_signal(SIGNAL_NONE), m_workFunc(nullptr), m_flags(0) {
-		m_work_arg_ptr[0] = m_work_arg_ptr[1] = nullptr;
-		m_work_arg_uint[0] = m_work_arg_uint[1] = 0;
+		for (size_t i = 0;
+				i < sizeof(m_work_arg_ptr) / sizeof(m_work_arg_ptr[0]); ++i)
+			m_work_arg_ptr[i] = nullptr;
+
+		for (size_t i = 0;
+				i < sizeof(m_work_arg_int) / sizeof(m_work_arg_int[0]); ++i)
+			m_work_arg_int[i] = 0;
 	}
 
 	~WorkerThread() {
