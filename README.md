@@ -26,6 +26,7 @@ Control:
 - requestWork
 - sendSignal
 - setDetachOnTerminate
+- reset
    
 Work configuration:   
 - setWorkFunction
